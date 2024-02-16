@@ -1,0 +1,111 @@
+/**
+ * @name Aitron's Theme
+ * @description Redisinged midnight theme with a custom colour palette and some other features!
+ * @author refact0r and Aitron
+ * @version 1.0.0
+ * @source https://github.com/refact0r/midnight-discord
+ * @authorId 508863359777505290
+*/
+
+/* Imports (remove or add the imports to add features) */
+
+/* Midnight theme */
+@import url('https://refact0r.github.io/midnight-discord/midnight.css');
+
+/* Settings Modal */
+@import url('https://mwittrien.github.io/BetterDiscordAddons/Themes/SettingsModal/SettingsModal.css');
+
+/* Server Colums */
+/* @import url(https://mwittrien.github.io/BetterDiscordAddons/Themes/ServerColumns/ServerColumns.css); */
+
+/* Customization Settings */
+:root {
+/* Midnight theme settings*/
+	/* amount of spacing and padding */
+	--spacing: 12px;
+	/* radius of round corners */
+	--roundness: 16px;
+
+	/* font, change to 'gg sans' for default discord font*/
+	--font: 'figtree';
+
+	/* color of green online dot, change to #23a55a for default green */
+	--online-indicator: var(--accent-2);
+
+	/* top left icon */
+	--moon-icon: none; /* change to 'none' to hide moon icon */
+	--discord-icon: block; /* change to 'block' to show default discord icon */
+
+	/* color of links */
+	--accent-1: hsl(152, 80%, 38%);
+	/* color of unread dividers and some indicators */
+	--accent-2: hsl(152, 80%, 33%);
+	/* color of accented buttons */
+	--accent-3: hsl(152, 80%, 30%);
+	/* color of accented buttons when hovered */
+	--accent-4: hsl(152, 80%, 28%);
+	/* color of accented buttons when clicked */
+	--accent-5: hsl(152, 80%, 26%);
+
+	/* color of mentions and messages that mention you */
+	--mention: hsla(190, 80%, 52%, 0.1);
+	/* color of mentions and messages that mention you when hovered */
+	--mention-hover: hsla(190, 80%, 52%, 0.05);
+
+	/* color of bright text on colored buttons */
+	--text-1: hsl(220, 40%, 90%);
+	/* color of headings and important text */
+	--text-2: hsl(220, 25%, 70%);
+	/* color of normal text */
+	--text-3: hsl(220, 15%, 60%);
+	/* color of icon buttons and channels */
+	--text-4: hsl(220, 15%, 40%);
+	/* color of muted channels/chats and timestamps */
+	--text-5: hsl(220, 15%, 25%);
+
+	/* color of dark buttons when clicked */
+	--bg-1: hsl(220, 15%, 20%);
+	/* color of dark buttons */
+	--bg-2: hsl(220, 15%, 16%);
+	/* color of spacing around panels and secondary elements */
+	--bg-3: hsl(220, 15%, 13%);
+	/* main background color */
+	--bg-4: hsl(220, 15%, 10%);
+
+	/* color of channels and icon buttons when hovered */
+	--hover: hsla(230, 20%, 40%, 0.1);
+	/* color of channels and icon buttons when clicked or selected */
+	--active: hsla(220, 20%, 40%, 0.2);
+	/* color of messages when hovered */
+	--message-hover: hsla(220, 0%, 0%, 0.1);
+	
+	/* top left icon */
+	--discord-icon: block; /* discord icon */
+	--moon-icon: none; /* moon icon */
+
+/* Settings Modal */
+	--settingsbackground: 	transparent;			/* default:	transparent		(lowest bg color of changed windows, change it in case another theme turns them transparent) */				/* default:	80vh			(height of the settings modal, px/vh) */
+	--settingswidth: 		1600;                   /* default:	1600	        (width of the settings modal) */
+	--settingsheight: 		80;                     /* default:	80vh			(height of the settings modal) */
+
+/* Server Colums */	
+	--columns:			3;							/* default:	3					(amount of servercolumns) */
+	
+	--guildsize:		50;							/* default:	50					(serversize in pixel) */
+	--guildgap:			3;							/* default:	3					(top/bottom gap between servers in pixel) */
+	
+	--aligndms:			0;							/* default:	0					(should DMs be aligned in columns: 0 = no, 1 = yes) */
+}
+
+[class^='wordmarkWindows']::after {
+	content: 'Discord';
+	display: block;
+	position: relative;
+	width: 200px;
+	height: 16px;
+	line-height: 16px;
+	font-family: var(--font-headline);
+	font-size: 10px;
+	font-weight: 600;
+	color: var(--text-5);
+}
